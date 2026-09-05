@@ -46,3 +46,22 @@ python -m src.q1
 - 论文中采用的图表复制或导出到 `figures/final/`。
 - 重要假设、符号和 AI 辅助过程分别记录在 `notes/assumptions.md`、`notes/symbols.md` 和 `notes/ai_log.md`。
 - 论文草稿需人工核对和改写后再提交，最终格式以当届竞赛官方要求为准。
+
+## 基础数学工具
+
+公共函数按职责拆分到以下模块：
+
+- `src/geometry.py`：向量、距离、投影与旋转矩阵。
+- `src/numerical.py`：求根、数值微分、积分、滑动平均与插值。
+- `src/statistics.py`：标准分数、变异系数、相关系数与 IQR 边界。
+- `src/preprocessing.py`：标准化与 Min-Max 归一化。
+- `src/search.py`：离散参数网格穷举搜索。
+
+所有公共函数均提供类型标注、行为说明和输入校验；弧度、自由度、
+区间外插值等容易产生歧义的约定已在对应函数的 docstring 中注明。
+
+## Codex Skills
+
+本项目可配合本机安装的数学建模、文件处理、论文写作和专项算法 Skills 使用。
+可用名称、适用场景与调用示例见 [`SKILLS.md`](SKILLS.md)。这些 Skills 属于 Codex
+工作流，不是 `requirements.txt` 中的 Python 依赖，换用其他环境时需要重新核对。
