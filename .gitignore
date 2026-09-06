@@ -19,9 +19,24 @@ env/
 # OS / editor
 .DS_Store
 Thumbs.db
-.vscode/
 .idea/
+
+# Keep shared VS Code project settings only.
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
 
 # Generated temporary outputs
 *.tmp
 *.log
+results/**/*.json
+results/**/*.csv
+results/**/*.xlsx
+results/**/*.log
+figures/**/*.png
+figures/**/*.svg
+figures/**/*.pdf
+figures/**/*.tif
+figures/**/*.tiff
+data/processed/*.csv
+data/processed/*.xlsx
