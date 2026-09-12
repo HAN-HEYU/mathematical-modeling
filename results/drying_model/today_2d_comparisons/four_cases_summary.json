@@ -1,0 +1,58 @@
+{
+  "parameters": {
+    "question": 4,
+    "side_h": 25,
+    "side_hm": 8e-07,
+    "end_h": 0,
+    "scenario": "mean",
+    "Ccrit": 0.15
+  },
+  "cases": [
+    {
+      "case": "① 一维径向收缩，端面无通量",
+      "R_shrink": true,
+      "H_shrink": false,
+      "endface_mass": false,
+      "hours": 51.1003282075399,
+      "grid": "N=40",
+      "status": "matched_baseline"
+    },
+    {
+      "case": "② 二维径向及轴向收缩，端面无通量",
+      "R_shrink": true,
+      "H_shrink": true,
+      "endface_mass": false,
+      "hours": 51.100299107619215,
+      "grid": "40x32",
+      "status": "previous_run_rtol_1e-7"
+    },
+    {
+      "case": "③ 二维径向收缩，轴向固定，端面传质",
+      "R_shrink": true,
+      "H_shrink": false,
+      "endface_mass": true,
+      "hours": 51.100326805566056,
+      "grid": "40x32",
+      "status": "verified",
+      "fine_grid": {
+        "grid": "80x64",
+        "hours": 51.09401128124877,
+        "status": "verified"
+      }
+    },
+    {
+      "case": "④ 二维径向及轴向收缩，端面传质",
+      "R_shrink": true,
+      "H_shrink": true,
+      "endface_mass": true,
+      "hours": 51.100090206468806,
+      "grid": "40x32",
+      "status": "verified",
+      "fine_grid": {
+        "case": "q4_case4_shrink_both_endface_verified",
+        "hours": 51.100090206468806
+      }
+    }
+  ],
+  "note": "③按用户最终条件重算；④已用同一修正后的二维求解器重算。旧51.532h来自混用离散程序，已撤销。"
+}

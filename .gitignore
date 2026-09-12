@@ -25,3 +25,9 @@ Thumbs.db
 # Generated temporary outputs
 *.tmp
 *.log
+
+# Local packaging and temporary exports
+论文手交付包_*/
+论文手交付包_*.zip
+*_交付包*/
+filelist.txt

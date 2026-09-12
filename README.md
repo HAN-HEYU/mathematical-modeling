@@ -65,3 +65,15 @@ python -m src.q1
 本项目可配合本机安装的数学建模、文件处理、论文写作和专项算法 Skills 使用。
 可用名称、适用场景与调用示例见 [`SKILLS.md`](SKILLS.md)。这些 Skills 属于 Codex
 工作流，不是 `requirements.txt` 中的 Python 依赖，换用其他环境时需要重新核对。
+
+## A题干燥过程项目
+
+本仓库同时整理了 A 题干燥过程数学建模项目。项目入口见 [`README_drying_A.md`](README_drying_A.md)。
+
+- 论文手写作总底稿：[`paper/drying_model/论文手_全方案与数据汇总.md`](paper/drying_model/论文手_全方案与数据汇总.md)
+- 四问模型与假设：[`notes/drying_model/四问模型总览.md`](notes/drying_model/四问模型总览.md)
+- 可复现代码：[`src/drying_model/`](src/drying_model/)
+- 主结果、验证、网格收敛和灵敏度：[`results/drying_model/`](results/drying_model/)
+- 原始附件：[`data/raw/drying_A/`](data/raw/drying_A/)
+
+正式主结果为问题三 57.474077 h、问题四 51.092074 h。二维端面和轴向收缩实验属于机制对照，旧版 51.532 h、57.64--57.65 h、131.266752 h 已作废。

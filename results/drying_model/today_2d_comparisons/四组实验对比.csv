@@ -1,0 +1,5 @@
+﻿工况,半径收缩,轴向收缩,端面传质,干燥时间_h,网格,状态
+① 一维径向收缩，端面无通量,True,False,False,51.1003282075399,N=40,matched_baseline
+② 二维径向及轴向收缩，端面无通量,True,True,False,51.100299107619215,40x32,previous_run_rtol_1e-7
+③ 二维径向收缩，轴向固定，端面传质,True,False,True,51.100326805566056,40x32,verified
+④ 二维径向及轴向收缩，端面传质,True,True,True,51.100090206468806,40x32,verified

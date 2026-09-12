@@ -1,0 +1,19 @@
+{
+  "reviewer": "/root/grid_audit",
+  "scope": "Bounded Q1/Q2 grid refinement; no physical-model validation and no original result replacement",
+  "P1": "PASS",
+  "P2": "PASS",
+  "independent_rerun": "integrate(q=1,n=400,end=1800)",
+  "independent_rerun_max_T_difference": 0.0,
+  "independent_rerun_max_C_difference": 0.0,
+  "verified": [
+    "Original spatial operators and output reconstruction retained",
+    "All required 1 s by 21 position comparisons",
+    "Approximate second-order spatial convergence",
+    "Initial surface moisture is the maximum grid discrepancy",
+    "Richardson remaining errors are estimates, not rigorous bounds",
+    "Four-decimal outputs are not identical at every point",
+    "Temporal comparison changes tolerance, maximum step and knot segmentation together",
+    "Seven original input/source/output hashes unchanged"
+  ]
+}
