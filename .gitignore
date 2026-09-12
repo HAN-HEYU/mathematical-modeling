@@ -31,3 +31,5 @@ Thumbs.db
 论文手交付包_*.zip
 *_交付包*/
 filelist.txt
+
+results/drying_model/generated/
