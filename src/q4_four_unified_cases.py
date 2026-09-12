@@ -15,8 +15,8 @@ from scipy.sparse import lil_matrix
 from scipy.interpolate import RegularGridInterpolator
 import solve_q34 as base
 
-ROOT=Path(__file__).resolve().parents[2]
-OUT=ROOT/'results'/'drying_model'/'today_2d_comparisons'
+ROOT=Path(__file__).resolve().parents[1]
+OUT=ROOT/'results'/'today_2d_comparisons'
 Hhalf=.125; hcoef=25.; hm=8e-7; R0=.02; Ltot=.25
 
 def P(c):

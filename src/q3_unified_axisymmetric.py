@@ -16,9 +16,9 @@ from scipy.sparse import lil_matrix
 from scipy.interpolate import RegularGridInterpolator
 import solve_q34 as base
 
-ROOT = Path(__file__).resolve().parents[2]
-DATA_ROOT = ROOT / 'data' / 'raw' / 'drying_A'
-OUT = ROOT / 'results' / 'drying_model' / 'q3_2d_endface'
+ROOT = Path(__file__).resolve().parents[1]
+DATA_ROOT = ROOT / 'data' / 'raw'
+OUT = ROOT / 'results' / 'q3_2d_endface'
 
 
 def primitive(c):

@@ -1,9 +1,9 @@
 import numpy as np, openpyxl, os, time, shutil
 from pathlib import Path
-PROJECT_ROOT=Path(__file__).resolve().parents[2]
-DATA_ROOT=PROJECT_ROOT/'data'/'raw'/'drying_A'
+PROJECT_ROOT=Path(__file__).resolve().parents[1]
+DATA_ROOT=PROJECT_ROOT/'data'/'raw'
 from scipy.integrate import solve_ivp
-OUTPUT_XLSX=PROJECT_ROOT/'results'/'drying_model'/'generated'/'result2.xlsx'
+OUTPUT_XLSX=PROJECT_ROOT/'results'/'generated'/'result2.xlsx'
 OUTPUT_XLSX.parent.mkdir(parents=True,exist_ok=True)
 if not OUTPUT_XLSX.exists(): shutil.copy2(DATA_ROOT/'result2.xlsx', OUTPUT_XLSX)
 from scipy.sparse import diags, bmat

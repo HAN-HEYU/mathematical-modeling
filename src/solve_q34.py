@@ -12,9 +12,9 @@ from scipy.sparse import diags, bmat, csr_matrix
 from scipy.interpolate import PchipInterpolator
 
 SCRIPT_DIR=Path(__file__).resolve().parent
-PROJECT_ROOT=SCRIPT_DIR.parents[1]
-DATA_ROOT=PROJECT_ROOT/'data'/'raw'/'drying_A'
-RESULT_ROOT=PROJECT_ROOT/'results'/'drying_model'
+PROJECT_ROOT=SCRIPT_DIR.parent
+DATA_ROOT=PROJECT_ROOT/'data'/'raw'
+RESULT_ROOT=PROJECT_ROOT/'results'
 def read(name):
     w=openpyxl.load_workbook(DATA_ROOT/name,data_only=True)
     a=np.array(list(w.active.values)[1:],float); w.close()
@@ -140,7 +140,7 @@ def run(q,n=400,scenario='mean',rtol=1e-9,method='BDF',max_step=3600,fixed=False
 
 def export(m,evaluate,stats):
     q=m.q;stop=stats['seconds'];times=np.r_[np.arange(60,stop,60),stop];radii=np.arange(21)*.001
-    path=DATA_ROOT/'附件3'/f'result{q}.xlsx';wb=openpyxl.load_workbook(path);ws=wb.worksheets[0]
+    path=DATA_ROOT/f'result{q}.xlsx';wb=openpyxl.load_workbook(path);ws=wb.worksheets[0]
     ws.delete_rows(1,ws.max_row)
     ws.append(['时间/s，距离/cm']+[round(r*100,1) for r in radii]+(['药材表面'] if q==4 else []))
     raw=[]

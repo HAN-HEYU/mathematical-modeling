@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-OUT = ROOT / 'results' / 'q4_four_unified'
+OUT = ROOT / 'results' / 'today_2d_comparisons'
 
 
 def main():

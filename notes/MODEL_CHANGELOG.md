@@ -58,7 +58,7 @@
 
 ### C5：网格实验报告与审计
 
-- 目录：results/grid_refinement_q12/。
+- 目录：results/grid_convergence/q12/。
 - 文件：网格加密对照结论.md、comparisons.csv、terminal_values.csv、summary.json、各网格NPZ、independent_audit.json。
 - 独立验收：P1、P2均通过；独立重跑问题一N=400与缓存结果的温度、含水率最大差均为0。
 - 输入附件、求解器、原Excel和原NPZ共七个文件的哈希未改变。
@@ -66,7 +66,7 @@
 ### C6：内粗外细非均匀网格试验（已完成，未采用）
 
 - 实验代码：nonuniform_grid_q12.py；幂函数网格按 p=2 向表面加密，总单元数 N=800。
-- 结果目录：results/grid_refinement_q12/；文件为 q1_nonuniform_N800_p2.npz、q2_nonuniform_N800_p2.npz 和 nonuniform_summary.json。
+- 结果目录：results/grid_convergence/q12/；文件为 q1_nonuniform_N800_p2.npz、q2_nonuniform_N800_p2.npz 和 nonuniform_summary.json。
 - 比较基准：统一严格时间设置下的均匀 N=3200 数值。
 - 第一问：最大温度差 4.38698e-6 ℃，最大含水率差 9.88568e-4 kg/kg。
 - 第二问：最大温度差 3.71782e-6 ℃，最大含水率差 8.08791e-4 kg/kg。
@@ -108,7 +108,7 @@
 
 ## C11（2026-09-11）：全方案基础灵敏度分析
 - 新增问题一、二物理参数扫描脚本 `sensitivity_q12.py`，结果写入 `results/all_sensitivity/q12_physical_sensitivity.{json,csv}`。
-- 汇总问题三 `results/q3_sensitivity/sensitivity_q3.{json,csv,md}`，并核正扩散系数倍率对通量的影响。
+- 汇总问题三 `results/sensitivity/sensitivity_q3.{json,csv,md}`，并核正扩散系数倍率对通量的影响。
 - 汇总问题四二维备用模型 `results/q4_2d_shrink/sensitivity.{json,csv}` 及网格/时间步/守恒检验。
 - 新增总报告 `全方案灵敏度分析报告.md`、`results/all_sensitivity/all_sensitivity.{json,summary.csv}`；所有扫描均不覆盖主生产结果。
 - 主要结论：各问对内部扩散系数 D 最敏感，表面传质系数 hm 次之，换热系数 h 较弱；Q3 环境尾部延拓约产生 0.53% 的时间变化；Q4 二维收缩参数 chi 在当前设定下影响小于 0.003%。

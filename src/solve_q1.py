@@ -3,10 +3,10 @@ from pathlib import Path
 from scipy.integrate import solve_ivp
 from scipy.sparse import diags
 
-PROJECT_ROOT=Path(__file__).resolve().parents[2]
-DATA_ROOT=PROJECT_ROOT/'data'/'raw'/'drying_A'
+PROJECT_ROOT=Path(__file__).resolve().parents[1]
+DATA_ROOT=PROJECT_ROOT/'data'/'raw'
 input_xlsx=str(DATA_ROOT/'附件1.xlsx')
-out_xlsx=str(PROJECT_ROOT/'results'/'drying_model'/'generated'/'result1.xlsx')
+out_xlsx=str(PROJECT_ROOT/'results'/'generated'/'result1.xlsx')
 os.makedirs(os.path.dirname(out_xlsx), exist_ok=True)
 if not os.path.exists(out_xlsx): shutil.copy2(DATA_ROOT/'result1.xlsx', out_xlsx)
 # read environment

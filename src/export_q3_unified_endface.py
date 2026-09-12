@@ -7,7 +7,7 @@ from openpyxl.styles import Font, PatternFill, Alignment
 from openpyxl.utils import get_column_letter
 
 ROOT=Path(__file__).resolve().parent
-P=ROOT/'results'/'q3_unified_endface'
+P=ROOT/'results'/'q3_2d_endface'
 
 def read(name):return json.loads((P/name).read_text(encoding='utf-8'))
 

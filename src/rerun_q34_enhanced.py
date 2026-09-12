@@ -3,7 +3,7 @@ import json, numpy as np, sys
 ROOT=Path(__file__).resolve().parent
 sys.path.insert(0,str(ROOT))
 from solve_q34 import run
-out=ROOT/'results'/'q34_enhanced'
+out=ROOT/'results'/'validation'
 out.mkdir(parents=True,exist_ok=True)
 # diagnostic rerun: Q3 and full Q4 at moderate resolution, plus Q4 shrinkage-off control
 runs={}
@@ -27,5 +27,5 @@ runs['Q4_main']['min_porosity_assumed']=minphi
 runs['Q4_main']['dry_mass_rel_error_assumed']=float(np.max(np.abs(Md_ratio-1)))
 runs['Q4_main']['porosity_assumptions']={'rho_s':rhos,'rho_w':rhow,'rho_d0':rhod0,'formula':'phi=1-rho_d(1/rho_s+C/rho_w), rho_d=rho_d0(R0/R)^2'}
 # write
-(ROOT/'results'/'q34_enhanced'/'enhanced_summary.json').write_text(json.dumps(runs,ensure_ascii=False,indent=2),encoding='utf-8')
+(ROOT/'results'/'validation'/'enhanced_summary.json').write_text(json.dumps(runs,ensure_ascii=False,indent=2),encoding='utf-8')
 print(json.dumps(runs,ensure_ascii=False,indent=2))

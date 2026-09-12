@@ -4,7 +4,7 @@ import csv, json, time, importlib
 import numpy as np
 
 ROOT=Path(__file__).resolve().parent
-OUT=ROOT/'results'/'q12_sensitivity'; OUT.mkdir(parents=True,exist_ok=True)
+OUT=ROOT/'results'/'sensitivity'; OUT.mkdir(parents=True,exist_ok=True)
 q1=importlib.import_module('solve_q1'); q2=importlib.import_module('solve_q2')
 
 def one_q1(case, fac, kind):

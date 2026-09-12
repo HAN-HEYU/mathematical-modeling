@@ -8,7 +8,7 @@ import csv, json, time
 from solve_q34 import run, H, HM
 
 ROOT = Path(__file__).resolve().parent
-OUT = ROOT / "results" / "q3_sensitivity"
+OUT = ROOT / "results" / "sensitivity"
 OUT.mkdir(parents=True, exist_ok=True)
 
 # Baseline is the published Q3 setting. Perturb one factor at a time.

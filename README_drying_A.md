@@ -4,20 +4,20 @@
 
 ## 入口
 
-- 方案与全部写作数据：[paper/drying_model/论文手_全方案与数据汇总.md](paper/drying_model/论文手_全方案与数据汇总.md)
-- 主模型与方程：[notes/drying_model/四问模型总览.md](notes/drying_model/四问模型总览.md)
-- 运行与复现说明：[src/drying_model/README.md](src/drying_model/README.md)
+- 方案与全部写作数据：[paper/论文手_全方案与数据汇总.md](paper/论文手_全方案与数据汇总.md)
+- 主模型与方程：[notes/四问模型总览.md](notes/四问模型总览.md)
+- 运行与复现说明：[src/README_drying_model.md](src/README_drying_model.md)
 
 ## 目录
 
-- `data/raw/drying_A/`：题目 PDF 和附件原始数据。
-- `src/drying_model/`：四问求解、网格收敛、灵敏度和二维对比代码。
-- `results/drying_model/main/`：四问主结果数组。
-- `results/drying_model/validation/`：守恒、边界、事件和算法校核。
-- `results/drying_model/grid_convergence/`：问题一二的 N=200--6400 全序列，以及问题三四 N=100/200/400 事件时间收敛。
-- `results/drying_model/sensitivity/`：灵敏度数据。
-- `results/drying_model/today_2d_comparisons/`：今天修正后的问题四二维四组对比和 chi 情景。
-- `paper/drying_model/`：面向论文写作的结果汇总。
+- `data/raw/`：题目 PDF 和附件原始数据。
+- `src/`：四问求解、网格收敛、灵敏度和二维对比代码。
+- `results/main/`：四问主结果数组。
+- `results/validation/`：守恒、边界、事件和算法校核。
+- `results/grid_convergence/`：问题一二的 N=200--6400 全序列，以及问题三四 N=100/200/400 事件时间收敛。
+- `results/sensitivity/`：灵敏度数据。
+- `results/today_2d_comparisons/`：今天修正后的问题四二维四组对比和 chi 情景。
+- `paper/`：面向论文写作的结果汇总。
 
 ## 关键口径
 
@@ -31,7 +31,7 @@
 
 ```powershell
 pip install -r requirements.txt
-python src/drying_model/solve_q1.py
+python src/solve_q1.py
 ```
 
-部分结果文件体积较大，若只阅读论文数据，可直接查看 `paper/drying_model/论文手_全方案与数据汇总.md`。
+部分结果文件体积较大，若只阅读论文数据，可直接查看 `paper/论文手_全方案与数据汇总.md`。

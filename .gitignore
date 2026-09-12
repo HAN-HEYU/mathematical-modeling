@@ -34,3 +34,5 @@ filelist.txt
 
 results/drying_model/generated/
 src/drying_model/results/
+
+results/generated/

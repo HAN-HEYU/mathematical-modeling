@@ -15,7 +15,7 @@ os.chdir(ROOT)
 import solve_q1 as q1
 import solve_q2 as q2
 
-OUT = ROOT / 'results' / 'grid_refinement_q12'
+OUT = ROOT / 'results' / 'grid_convergence' / 'q12'
 
 def digest(p):
     return hashlib.sha256(p.read_bytes()).hexdigest()
