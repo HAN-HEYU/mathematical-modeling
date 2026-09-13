@@ -1,0 +1,28 @@
+图像模型精修版 V3
+生成方式：内置 image_gen 图像编辑模型。
+用途：论文中原一维径向主模型示意图；端面效应忽略；第四问仅径向收缩。
+校正：侧表面水分箭头指向药材外侧。
+输出类型：PNG 位图，非 SVG/PDF 矢量图。
+
+最终生成提示词：
+Use case: style-transfer / scientific-educational.
+Input image 1 is the edit target: an existing Chinese academic schematic of cylindrical medicinal material drying. Redesign its visual presentation substantially, not merely upscale it. The user wants a visibly more beautiful, carefully composed, publication-ready figure.
+
+OUTPUT: one crisp high-resolution landscape scientific plate, approximately 2.65:1 aspect ratio, ideally 3840 pixels wide. White background. An elegant editorial figure suitable for a mathematical modeling journal. No photographs, no decorative lab icons, no glossy infographic, no heavy cards or drop shadows. Fine navy outlines, quiet powder-blue material fills with only extremely subtle shape shading, muted vermilion heat arrows, clear teal-blue moisture arrows, graphite mathematical text. Chinese typography like a well-typeset scientific book; math symbols with true subscripts. Large legible labels with generous breathing room.
+
+LAYOUT: three balanced, equal-height columns with their (a), (b), (c) panel headings perfectly aligned along the same baseline. Matching generous margins. Two very faint thin vertical separators. Moderate size title centered above; not oversized. Drawings aligned and similar visual weight. Short annotations neatly aligned below their diagrams; no label crosses an arrow or boundary. Conclude with one centered compact arrow legend. Use considerably better typography, hierarchy and spatial balance than the reference.
+
+EXACT TITLE: "模型假设中的物理对象与边界描述"
+
+PANEL (a) heading: "(a) 几何与材料".
+Draw a refined horizontal cylindrical material object with accurate elliptical end faces and restrained blue shading. Clearly visible dashed axial centerline. Dimension arrow for initial length L above the cylinder, and a radius arrow from the center of one end face to its rim labeled R₀. Dimensions must not overlap object or text. Labels: "初始长度 L", "初始半径 R₀". Beneath: "均匀圆柱形药材" and smaller "端面效应忽略". Do not draw flux through cylinder end faces.
+
+PANEL (b) heading: "(b) 径向传热传质".
+Draw one perfectly circular radial cross-section, elegant concentric pale-blue regions indicating a schematic radial field, not numerical results. Around the perimeter use two RED arrows from air INTO material and two BLUE arrows from material OUT into air. Within the circle indicate radial moisture migration with a few tasteful thin blue outward arrows. Center labeled "x = 0" and "中心对称"; rim labeled "x = 1" and "表面". Use a fine dark radius arrow clearly distinct from the colored physical-flux arrows. Place the mapping "x = r / R(t)" in its own unobstructed position below. Do not label the whole radial coordinate r=R(t); R(t) only means the outer radius. Preserve circular geometry, no clutter.
+
+PANEL (c) heading: "(c) 表面交换与收缩".
+Redesign the confusing reference into a lucid magnified SIDE-SURFACE detail. Put pale-blue material on LEFT, air on RIGHT, a thin vertical interface between. Above air: "热风环境" with "T∞" in muted red and "H∞" in blue. Below material: "药材内部". Label interface "侧表面". RED heat arrow must point LEFT from air into material. BLUE moisture arrow must point RIGHT from material into air. The blue water arrow MUST be outward, correcting the erroneous inward arrow in the reference. Beneath the exchange sketch, draw a small separate radial-shrink illustration: dashed larger circular outline R₀ and smaller solid circular outline R(t), with inward motion arrows in neutral gray, label "Q4：径向收缩". Keep this distinct from heat and water arrows. Final small note: "端面不单独建模".
+
+BOTTOM SHARED LEGEND: small red inward-style arrow followed by "热量传入"; small blue outward-style arrow followed by "水分逸出"; gray dashed/solid swatches followed by "初始 / 收缩后边界". Keep legend away from explanatory notes.
+
+Scientific invariants: this figure depicts the existing ONE-DIMENSIONAL RADIAL MAIN MODEL, with end effects ignored and radial shrinkage in Q4. DO NOT add r-z domains, axial shrinkage, end-face heat transfer, end-face evaporation, numerical values, transport equations, or new physical assumptions. No invented text or watermarks. All Chinese words must be correct and sharply legible. Visually upgrade the entire composition while faithfully preserving the original physics.
